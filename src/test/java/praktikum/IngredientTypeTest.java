@@ -17,15 +17,15 @@ public class IngredientTypeTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getIngredientTypeData(){
+    public static Object[][] getIngredientTypeData() {
         return new Object[][]{
-                {IngredientType.FILLING,"FILLING"},
-                {IngredientType.SAUCE,"SAUCE"},
+                {IngredientType.FILLING, "FILLING"},
+                {IngredientType.SAUCE, "SAUCE"},
         };
-        }
+    }
 
     @Test
-    public void checkIngredientTypeTest(){
+    public void checkIngredientTypeTest() {
         assertEquals(type.name(), expected);
     }
 }

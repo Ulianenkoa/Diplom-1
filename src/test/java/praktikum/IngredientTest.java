@@ -9,10 +9,10 @@ import static praktikum.IngredientType.FILLING;
 import static praktikum.IngredientType.SAUCE;
 
 @RunWith(Parameterized.class)
-    public class IngredientTest {
-        private final String ingredientName;
-        private final float ingredientPrice;
-        private final IngredientType ingredientType;
+public class IngredientTest {
+    private final String ingredientName;
+    private final float ingredientPrice;
+    private final IngredientType ingredientType;
 
     public IngredientTest(String ingredientName, float ingredientPrice, IngredientType ingredientType) {
         this.ingredientName = ingredientName;
@@ -21,28 +21,28 @@ import static praktikum.IngredientType.SAUCE;
     }
 
     @Parameterized.Parameters
-        public static Object[][] getIngredient(){
+    public static Object[][] getIngredient() {
         return new Object[][]{
-            {"sour cream", 200, SAUCE},
-            {"dinosaur", 200, FILLING},
+                {"sour cream", 200, SAUCE},
+                {"dinosaur", 200, FILLING},
         };
     }
 
     @Test
-    public void getNameIngShouldBeCorrect(){
+    public void getNameIngShouldBeCorrect() {
         Ingredient ingredient = new Ingredient(ingredientType, ingredientName, ingredientPrice);
-        assertEquals("Некорректное название ингридента",ingredientName, ingredient.getName());
+        assertEquals("Некорректное название ингридента", ingredientName, ingredient.getName());
     }
 
     @Test
-    public void getPriceIngShouldBeCorrect(){
+    public void getPriceIngShouldBeCorrect() {
         Ingredient ingredient = new Ingredient(ingredientType, ingredientName, ingredientPrice);
-        assertEquals(ingredientPrice,ingredient.getPrice(),0 );
+        assertEquals(ingredientPrice, ingredient.getPrice(), 0);
     }
 
     @Test
-    public void getTypeIngShouldBeCorrect(){
+    public void getTypeIngShouldBeCorrect() {
         Ingredient ingredient = new Ingredient(ingredientType, ingredientName, ingredientPrice);
-        assertEquals("Некорректный тип ингридиента",ingredientType, ingredient.getType());
+        assertEquals("Некорректный тип ингридиента", ingredientType, ingredient.getType());
     }
 }

@@ -27,13 +27,14 @@ public class BunTest {
                 {new Bun("red bun", 300), "red bun", 300},
         };
     }
+
     @Test
-    public void getNameBunShouldBeCorrect(){
-        assertEquals("Некорректное наименование булочки",expectedNameBun,bun.getName());
+    public void getNameBunShouldBeCorrect() {
+        assertEquals("Некорректное наименование булочки", expectedNameBun, bun.getName());
     }
 
     @Test
-    public void getPriceBunShouldBeCorrect(){
-        assertEquals(expectedPriceBun,bun.getPrice(),0);
+    public void getPriceBunShouldBeCorrect() {
+        assertEquals(expectedPriceBun, bun.getPrice(), 0);
     }
 }

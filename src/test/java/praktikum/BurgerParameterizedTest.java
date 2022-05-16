@@ -22,22 +22,22 @@ public class BurgerParameterizedTest {
     }
 
     @Parameterized.Parameters
-        public static Object[][] getPriceData(){
+    public static Object[][] getPriceData() {
         return new Object[][]{
-                {new Bun("black bun",100), new Ingredient(IngredientType.FILLING, "cutlet",100),new Ingredient(IngredientType.SAUCE, "hot sauce",100), 400},
-                {new Bun("white bun",200), new Ingredient(IngredientType.FILLING, "sausage",300),new Ingredient(IngredientType.SAUCE, "sour cream",200), 900},
-                {new Bun("red bun",300), new Ingredient(IngredientType.FILLING, "dinosaur",200),new Ingredient(IngredientType.SAUCE, "chili sauce",300), 1100},
-                {new Bun("red bun",300), new Ingredient(IngredientType.FILLING, "dinosaur",200),new Ingredient(IngredientType.SAUCE, "chili sauce",300), 1100},
+                {new Bun("black bun", 100), new Ingredient(IngredientType.FILLING, "cutlet", 100), new Ingredient(IngredientType.SAUCE, "hot sauce", 100), 400},
+                {new Bun("white bun", 200), new Ingredient(IngredientType.FILLING, "sausage", 300), new Ingredient(IngredientType.SAUCE, "sour cream", 200), 900},
+                {new Bun("red bun", 300), new Ingredient(IngredientType.FILLING, "dinosaur", 200), new Ingredient(IngredientType.SAUCE, "chili sauce", 300), 1100},
+                {new Bun("red bun", 300), new Ingredient(IngredientType.FILLING, "dinosaur", 200), new Ingredient(IngredientType.SAUCE, "chili sauce", 300), 1100},
         };
     }
 
     @Test
-        public void getPriceBurgerTest(){
+    public void getPriceBurgerTest() {
         Burger burger = new Burger();
         burger.setBuns(bun);
         burger.addIngredient(firstIngredient);
         burger.addIngredient(secondIngredient);
-        assertEquals(expectedPrice,burger.getPrice(),0);
+        assertEquals(expectedPrice, burger.getPrice(), 0);
     }
 
     @Test
